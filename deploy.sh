@@ -9,7 +9,7 @@ docker push vikas888/multi-worker:latest
 docker push vikas888/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=vikas888/multi-server:$SHA
-kubectl set image deployments/client-deployment server=vikas888/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=vikas888/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=vikas888/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=vikas888/multi-worker:$SHA
 
 
